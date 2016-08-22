@@ -1,5 +1,7 @@
 package val.gameloop;
 
+import java.util.Random;
+
 import val.controller.Controller;
 import val.view.View;
 
@@ -39,6 +41,7 @@ public class GameLoop {
 		int colHolder;
 		int rowHolder;
 		while(true){
+			System.out.println(board.length);
 			colHolder = c.promptForMove();
 			rowHolder = makeMove(1, colHolder);	//Player Move
 			view.printBoard();
@@ -144,7 +147,7 @@ public class GameLoop {
 					}
 				}
 			}
-			System.out.println(best);
+			//System.out.println(best);
 		}
 		return best;
 	}
@@ -158,7 +161,7 @@ public class GameLoop {
 		}
 		//check max depth
 		else if(depth==maxDepth){
-			return depth;
+			return -depth;
 		}
 		else{
 			int score;
