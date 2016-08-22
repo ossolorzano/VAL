@@ -17,6 +17,9 @@ public class Controller {
 		return Integer.parseInt(moveString);
 	}
 	
+	public int getMoveColumn(){
+		return Integer.parseInt(moveString);
+	}
 	public void closeKB(){
 		kb.close();
 	}
