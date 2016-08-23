@@ -7,6 +7,18 @@ import val.gameloop.GameLoop;
 public class Controller {
 	private static Scanner kb = new Scanner(System.in);
 	private String moveString;
+	
+	public boolean isAIFirst(){
+		String first;
+		System.out.println("Would the AI go first? Y/N");
+		first = kb.next().toUpperCase();
+		if(first.equals("Y")){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
 	//Player move prompt
 	public int promptForMove(){
 		System.out.println("Select a column");
